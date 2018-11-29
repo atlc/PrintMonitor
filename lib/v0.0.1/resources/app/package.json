@@ -1,0 +1,23 @@
+{
+  "name": "printmonitor",
+  "version": "1.0.0",
+  "description": "An electron app used to monitor the open lab's printer",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/atlc/PrintMonitor",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^3.0.7",
+    "electron-packager": "^12.2.0"
+  }
+}

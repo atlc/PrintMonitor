@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>HSB 450 Printer Monitor</title>
+    <script>
+      setTimeout(function () { 
+        location.reload();
+      }, 30000);
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+          <div class="col-4">
+              <webview id="trayStatuses" src="https://172.16.104.76/hp/device/DeviceStatus/Index/" autosize="on" style="max-width:1920px; min-height:1080px;"></webview>
+          </div>
+          <div class="col-2">
+              <webview id="pageUsage" src="https://172.16.104.76/hp/device/InternalPages/Index?id=UsagePage" autosize="on" style="max-width:1920px; min-height:1080px"></webview>
+            </div>
+            <div class="col-6">
+              <webview id="jobLog" src="https://172.16.104.76/hp/device/JobLogReport/Index" autosize="on" style="max-width:1920px; min-height:1080px"></webview>
+            </div>
+      </div>
+    </div>
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js')
+    </script>
+  </body>
+</html>
